@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: minhas-fastapi-app
+    ports:
+      - "8000:8000"
+    volumes:
+      # Monta o diretório do código-fonte para habilitar o hot-reload
+      # O banco de dados SQLite (escola.db) será criado aqui no host
+      - ./routers:/app
+    command: uvicorn app:app --host 0.0.0.0 --port 8000 --reload

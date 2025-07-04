@@ -1,0 +1,15 @@
+# Arquivos de banco de dados
+escola.db
+*.db
+*.sqlite3
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+
+# Arquivos de IDE
+.vscode/
+.idea/
